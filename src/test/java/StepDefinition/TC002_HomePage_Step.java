@@ -14,7 +14,6 @@ public class TC002_HomePage_Step extends BaseClass {
 	public void user_should_validate_logo() {
 
 		home = new homePage();
-         System.out.println(home.validateLogo());
 		Assert.assertEquals(home.validateLogo(), true);
 	}
 

@@ -2,6 +2,7 @@ package hooks;
 
 import BaseLayer.BaseClass;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
 
 public class Hooks extends BaseClass {
@@ -15,6 +16,11 @@ public class Hooks extends BaseClass {
 	@After
 	public static void refresh() {
 		getDriver().navigate().refresh();
+	}
+
+	@AfterAll
+	public static void terminateBrowser() throws Exception {
+		BaseClass.tearDown();
 	}
 
 }
