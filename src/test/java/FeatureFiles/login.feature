@@ -33,9 +33,9 @@ Feature: To Test Orange HRM
     When user click on Login button
     Then user should validate credentialsErrorMessage
 
+  @sanity
   Scenario: Test Login Functionality with valid username and valid password
     Given user should enter username as "Admin"
     And user should enter password as "admin123"
     When user click on Login button
     Then user should navigate to homepage and validate the title as "OrangeHRM"
-    

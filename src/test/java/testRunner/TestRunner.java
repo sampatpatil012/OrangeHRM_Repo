@@ -8,8 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 		features = "src/test/java/FeatureFiles", 
 		glue = {"StepDefinition","hooks"} ,
 		dryRun = false, 
-		monochrome = true
-
+		monochrome = true,
+         tags="@sanity"
 )
 
 public class TestRunner extends AbstractTestNGCucumberTests {

@@ -8,7 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class login_Step extends BaseClass {
+public class TC001_login_Step extends BaseClass {
 
 	private static login_Page login;
 
