@@ -24,6 +24,9 @@ public class login_Page extends BaseClass {
 	@FindBy(xpath = "//input[@name='username']/parent::div/following-sibling::span")
 	private WebElement usernameErrorMessage;
 
+	
+	@FindBy(xpath = "//p[text()='Invalid credentials']")
+	private WebElement credentialErrorMessage;
 
 	public login_Page() {
 
@@ -50,6 +53,10 @@ public class login_Page extends BaseClass {
 	public String userNameErrorMessage() {
 		return WebElementHelper.getText(usernameErrorMessage);
 	}
+	public String credErrorMessage() {
+		return WebElementHelper.getText(credentialErrorMessage);
+	}
+	
 	
 
 }

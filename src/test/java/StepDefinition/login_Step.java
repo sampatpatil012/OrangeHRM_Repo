@@ -42,4 +42,10 @@ public class login_Step extends BaseClass {
 
 		Assert.assertEquals(login.userNameErrorMessage(), "Required");
 	}
+	
+	@Then("user should validate credentialsErrorMessage")
+	public void user_should_validate_credentials_error_message() {
+	    
+		Assert.assertEquals(login.credErrorMessage(), "Invalid credentials");
+	}
 }
