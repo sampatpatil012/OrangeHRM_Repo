@@ -34,5 +34,12 @@ public class WebElementHelper extends BaseClass {
 		}
 		return null;
 	}
+//	public static boolean displayed(WebElement wb) {
+//		
+//			return WaitsHelper.visibilityOf(wb).isDisplayed();
+//		
+//		
+//	}
+
 
 }
