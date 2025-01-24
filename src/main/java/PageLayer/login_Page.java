@@ -11,12 +11,19 @@ public class login_Page extends BaseClass {
 
 	@FindBy(name = "username")
 	private WebElement username;
+	
+	@FindBy(name = "password")
+	private WebElement password;
 
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement loginbutton;
 
 	@FindBy(xpath = "//input[@name='password']/parent::div/following-sibling::span")
 	private WebElement passwordErrorMessage;
+	
+	@FindBy(xpath = "//input[@name='username']/parent::div/following-sibling::span")
+	private WebElement usernameErrorMessage;
+
 
 	public login_Page() {
 
@@ -26,13 +33,23 @@ public class login_Page extends BaseClass {
 	public void enterUsername(String userName) {
 		WebElementHelper.sendKeys(username, userName);
 	}
+	
+	
+	public void enterPassword(String pass) {
+		WebElementHelper.sendKeys(password, pass);
+	}
 
 	public void clickonLoginButton() {
 		WebElementHelper.click(loginbutton);
 	}
 	
-	public String captureErrorMessage() {
+	public String passwordErrorMessage() {
 		return WebElementHelper.getText(passwordErrorMessage);
 	}
+	
+	public String userNameErrorMessage() {
+		return WebElementHelper.getText(usernameErrorMessage);
+	}
+	
 
 }
