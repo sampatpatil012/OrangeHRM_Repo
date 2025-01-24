@@ -1,5 +1,7 @@
 package StepDefinition;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import BaseLayer.BaseClass;
@@ -51,6 +53,9 @@ public class TC001_login_Step extends BaseClass {
 	@Then("user should navigate to homepage and validate the title as {string}")
 	public void user_should_navigate_to_homepage_and_validate_the_title_as(String title) {
 		Assert.assertEquals(getDriver().getTitle(), title);
+		
+		
+		
 	}
 
 }
