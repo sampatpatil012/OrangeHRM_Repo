@@ -11,3 +11,10 @@ Feature: To Test Orange HRM
     When user click on Login button
     Then user should validate usernameErrorMessage
     
+  Scenario: Test Login Functionality with Invalid credentials
+  	Given user should enter username as "wrongUsername"
+  	And user should enter password as "wrongpw"
+  	When user click on Login button
+  	Then user should validate credentialsErrorMessage
+    
+    
